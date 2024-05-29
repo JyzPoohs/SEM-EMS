@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>e-Munakahat</title>
 
-    <link rel="icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
-    <link href="{{ env('APP_URL') . '/css/user-sidebar.css' }}" rel="stylesheet" />
+    <link href="{{ url('/css/user-sidebar.css') }}" rel="stylesheet" />
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -34,7 +34,7 @@
 
     <header class="container">
         <a href="{{ route('login') }}">
-            <img src="{{ env('APP_URL') . '/img/Header.png' }}" width="100%" style="align-content: center;"
+            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;"
                 alt="Header EMS">
         </a>
     </header>

@@ -4,7 +4,7 @@
     <div class="container" style="font-family: 'Times New Roman', Times, serif">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <img src="{{ env('APP_URL') . '/img/indek.png' }}" width="100%" style="align-content: center;" alt="Indek">
+                <img src="{{ url('/img/indek.png') }}" width="100%" style="align-content: center;" alt="Indek">
             </div>
             <div class="col-md-4">
                 @error('fail')

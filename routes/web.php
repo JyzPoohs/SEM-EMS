@@ -130,7 +130,6 @@ Route::prefix('staff')->name('staff.')->group(function () {
 
         Route::view('/Viewinformation', 'manageConsultation(staff).ViewInformation')->name('ViewInformation');
         Route::view('/ConsultationApplicationList', 'manageConsultation(staff).ConsultationApplicationList')->name('ConsultationApplicationList');
-
     });
 
 
