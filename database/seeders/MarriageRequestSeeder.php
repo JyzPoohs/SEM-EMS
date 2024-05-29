@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Marriage_Request;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -19,8 +18,8 @@ class MarriageRequestSeeder extends Seeder
         $datas = [
             [
                 'U_IC_No' => '111111111111',
-                'Birthday' => "11/11/11",
-                'Age' => "21",
+                'Birthday' => "11/11/1998",
+                'Age' => "26",
                 'Ethnic' => "MELAYU",
                 'Nationality' => "MALAYSIA",
                 'IC_Address' => '123-A, TAMAN TAS, KUANTAN, PAHANG',
@@ -32,15 +31,15 @@ class MarriageRequestSeeder extends Seeder
                 'Job_Address' => "21-A, UMP",
                 'Office_Phone' => "0114108809",
                 'Amount_Salary' => "5000",
-                'Marriage_Status' => "IN PROGRESS",
+                'Marriage_Status' => "BUJANG",
                 'PrepCourse_ID' => "PC012",
                 'Status_Saudara_Baru' => "BAPA",
                 'Request_Status' => "SUBMITED",
 
-                // 'created_at' => "14/6/2023",
-                // 'updated_at' => "14/6/2023",
-                // 'Date_Request' => "14/6/2023",
-                // 'Date_Nikah' => "10/6/2023",
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+                'Date_Request' => Carbon::now(),
+                'Date_Nikah' => Carbon::now(),
                 'Marriage_Place' => "KUANTAN",
                 'Marriage_Country' => "MALAYSIA",
                 'Marriage_Place_Address' => "37-S, KUANTAN",
@@ -54,9 +53,9 @@ class MarriageRequestSeeder extends Seeder
                 'W_Category_Nikah' => "NONE",
 
                 'Pasangan_IC_No' => "011011020202",
-                'P_Name' => "SITI",
+                'P_Name' => "SITI BINTI KALIB",
                 'P_Date_of_Birth' => "11/10/2001",
-                'P_Age' => "22",
+                'P_Age' => "23",
                 'P_Ethnic' => "MELAYU",
                 'P_Rationality' => "MALAYSIA",
                 'P_IC_Address' => "2, awe12",

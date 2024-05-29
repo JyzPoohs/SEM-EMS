@@ -93,11 +93,11 @@
                         <br>
                         <div class="row justify-content-center text-center">
                             <div class="col-md-3">
-                                <a href="{{ route('staff.eFormsGrooms') }}" class="btn btn-primary btn-block"
+                                <a href="{{ route('staff.eFormsGrooms', ['id' => $data->MR_ID]) }}" class="btn btn-primary btn-block"
                                     style="background-color: #179591; border:none; color: white;">BACK</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="{{ route('staff.eFormsMarriage') }}" class="btn btn-primary btn-block"
+                                <a href="{{ route('staff.eFormsMarriage', ['id' => $data->MR_ID]) }}" class="btn btn-primary btn-block"
                                     style="background-color: #179591; border:none; color: white;">NEXT</a>
                             </div>
                         </div>

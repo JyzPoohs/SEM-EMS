@@ -16,12 +16,18 @@ class UserManageMarriageRegController extends Controller
         // $eform = Marriage_Request::where('U_IC_No',$ic)->first();
         return view("registerMarriageUser.marriageRegistrationList", compact('datas')); 
     }
+
+    //Display the view form of the bride and groom information
+    public function couple($id)
+    {
+        $data = Marriage_Registration::where('MR_ID', $id)->with('mohon.user')->first();
+        return view('registerMarriageUser.view-BrideGroom', compact('data'));
+    }
     
     public function editEFormsGrooms()
     {
         $ic = auth()->user()->ic;
         $data = Marriage_Registration::where('U_IC_No', $ic)->with('mohon.user')->first();
-        // dd($data);
         return view('registerMarriageUser.editE-FormGrooms-view',compact('data'));
     }
 

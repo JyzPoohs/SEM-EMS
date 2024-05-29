@@ -15,16 +15,17 @@ class MarriageRegistrationSeeder extends Seeder
     {
         $datas = [
             [
-                // 'MR_noDaftarSijil' => '(PN)MS/0077/2022-D1-SN06220021',
-                // 'MR_suami_ic' => '111111111111',
-                // 'MR_suami_nama' => 'UMAH BIN ABDULLAH',
-                // 'MR_isteri_ic' => '640510065551',
-                // 'MR_isteri_nama' => 'ROSE BINTI LUQMAN',
-                // 'MR_noAkaunTerima' => 'KTN1M4/2022-00012',
+                'MR_ID' => 1,
+                'MR_Jurunikah_Name' => 'Ali',
+                'MR_Payment_Receipt' => 'R001',
+                'MR_Lafaz_Taliq' => 'Ya',
+                'MR_Approval_Date' => '2024-05-21',
                 'MR_Approval_Status' => 'LULUS',
+                'MR_Submit_Status' => 'Submitted',
                 'U_IC_No' => '111111111111',
                 'request_id' => 1,
-
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
          
         ];

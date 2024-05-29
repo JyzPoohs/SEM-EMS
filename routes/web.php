@@ -71,6 +71,8 @@ Route::prefix('user')->name('user.')->group(function () {
     //Marriage Reigstration
     Route::get('/manageMarriageRegistration', [UserManageMarriageRegController::class, 'manage'])->name('manageMarriageRegistration');
     Route::get('/marriageRegistrationWithApproval', [UserManageMarriageRegController::class, 'marriageRegistrationWithApproval'])->name('marriageRegistrationWithApproval');
+   
+    Route::get('/eForm-BrideGroom/{id}', [UserManageMarriageRegController::class, 'couple'])->name('couple');
     Route::get('/eFormsGrooms', [UserManageMarriageRegController::class, 'eFormsGrooms'])->name('eFormsGrooms');
     Route::get('/eFormsBrides', [UserManageMarriageRegController::class, 'eFormsBrides'])->name('eFormsBrides');
     Route::get('/eFormsMarriage', [UserManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
@@ -130,6 +132,22 @@ Route::prefix('staff')->name('staff.')->group(function () {
 
         Route::view('/Viewinformation', 'manageConsultation(staff).ViewInformation')->name('ViewInformation');
         Route::view('/ConsultationApplicationList', 'manageConsultation(staff).ConsultationApplicationList')->name('ConsultationApplicationList');
+
+        //Module 3
+        Route::get('/manageMarriage', [StaffManageMarriageRegController::class, 'manage'])->name('manageMarriage');
+        Route::get('/manageMarriageCardApplicationListStaff', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApplicationListStaff');
+        
+        Route::get('/eForm-BrideGroom/{id}', [StaffManageMarriageRegController::class, 'couple'])->name('couple');
+        Route::get('/eFormsGrooms/{id}', [StaffManageMarriageRegController::class, 'eFormsGrooms'])->name('eFormsGrooms');
+        Route::get('/eFormsBrides/{id}', [StaffManageMarriageRegController::class, 'eFormsBrides'])->name('eFormsBrides');
+        Route::get('/eFormsMarriage/{id}', [StaffManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
+        Route::get('/approveMarriageRegistration/{id}', [StaffManageMarriageRegController::class, 'approveMarriageRegistration'])->name('approveMarriageRegistration');
+        Route::get('/deleteMR/{id}', [StaffManageMarriageRegController::class, 'destroy'])->name('deleteMarriageRegistration');
+
+        Route::get('/manageMarriageCardApp', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApp');
+        Route::get('/approveMarriageCardApp', [StaffManageCardAppController::class, 'approveCardAppStaff'])->name('approveMarriageCardApp');
+        Route::put('/{id}/updateCardApp', [StaffManageCardAppController::class, 'update'])->name('updateCardApp');
+        Route::delete('/deleteMarriageCardApp/{id}', [StaffManageCardAppController::class, 'destroy'])->name('deleteMarriageCardApp');
     });
 
 
@@ -162,17 +180,6 @@ Route::prefix('staff')->name('staff.')->group(function () {
     Route::get('viewEListGroomsPrepCourse', [StaffManageCourseController::class, 'viewEListGroomsPrepCourse'])->name('viewEListGroomsPrepCourse');
     Route::get('viewEGroomsInformation', [StaffManageCourseController::class, 'viewEGroomsInformation'])->name('viewEGroomsInformation');
 
-    //Module 3
-    Route::get('/manageMarriage', [StaffManageMarriageRegController::class, 'manage'])->name('manageMarriage');
-    Route::get('/manageMarriageCardApplicationListStaff', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('staff.manageMarriageCardApplicationListStaff');
-    Route::get('/eFormsGrooms', [StaffManageMarriageRegController::class, 'eFormsGrooms'])->name('eFormsGrooms');
-    Route::get('/eFormsBrides', [StaffManageMarriageRegController::class, 'eFormsBrides'])->name('eFormsBrides');
-    Route::get('/eFormsMarriage', [StaffManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
-    Route::get('/approveMarriageRegistration', [StaffManageMarriageRegController::class, 'approveMarriageRegistration'])->name('approveMarriageRegistration');
-
-    Route::get('/manageMarriageCardApp', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApp');
-    Route::get('/approveMarriageCardApp', [StaffManageCardAppController::class, 'approveCardAppStaff'])->name('approveMarriageCardApp');
-    Route::put('/{id}/updateCardApp', [StaffManageCardAppController::class, 'update'])->name('updateCardApp');
 
 
     //module 4
