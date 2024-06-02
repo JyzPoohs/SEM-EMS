@@ -4,7 +4,9 @@
 @section('content')
     <div class="container-fluid">
         <div class="row mt-4">
-            <h5>PERMOHONAN PENDAFTARAN PERKHAWINAN</h5>
+            <a href="{{route('user.manageMarriageRegistration')}}">
+                <h5>PERMOHONAN PENDAFTARAN PERKHAWINAN</h5>
+            </a>
             <div class="col-lg-12">
                 <div class="card-header" style="background-color: #819CCE">
                     <div class="row py-0">
@@ -12,7 +14,7 @@
                             <h6>E-FORMS >> <b>GROOM & BRIDE</b></h6>
                         </div>
                         <div class="col-md-1">
-                            <a href="{{ route('user.editEFormsMarriage') }}" class="btn btn-sm btn-light text-dark"
+                            <a href="{{ route('user.viewEFormsMarriage', ['id' => $data->MR_ID]) }}" class="btn btn-sm btn-light text-dark"
                                 style="border:none; color: white; font-size: 20px">&#8594;</a>
                         </div>
                     </div>
@@ -208,7 +210,7 @@
                                 <p>{{ $data->mohon->Marriage_Status}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p> - </p>
+                                <p>{{ $data->mohon->P_Marriage_Status}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -278,7 +280,7 @@
                                     style="background-color: #0050d1; border:none; color: white;">Back To List</a>
                             </div>
                             <div class="col-md-4">
-                                <a href="{{ route('user.editEFormsMarriage') }}" class="btn btn-primary btn-block"
+                                <a href="{{ route('user.viewEFormsMarriage', ['id' => $data->MR_ID]) }}" class="btn btn-primary btn-block"
                                     style="background-color: #0050d1; border:none; color: white;">Next</a>
                             </div>
                         </div>

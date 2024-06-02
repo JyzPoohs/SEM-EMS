@@ -13,6 +13,8 @@ class Marriage_Registration extends Model
         'MR_ID',
         'MR_Jurunikah_Name',
         'MR_Payment_Receipt',
+        'MR_Receipt_Proof',
+        'MR_Time_Nikah',
         'MR_Lafaz_Taliq',
         'MR_Submit_Status',
         'MR_Approval_Status',

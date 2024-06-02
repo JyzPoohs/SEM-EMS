@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('MR_ID');
             $table->string('MR_Jurunikah_Name')->nullable();
             $table->string('MR_Payment_Receipt')->nullable();
+            $table->string('MR_Receipt_Proof')->nullable();
+            $table->time('MR_Time_Nikah')->nullable();
             $table->string('MR_Lafaz_Taliq')->nullable();
             $table->string('MR_Approval_Date')->nullable();
             $table->string('MR_Approval_Status')->nullable();

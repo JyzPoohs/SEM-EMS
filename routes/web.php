@@ -70,19 +70,17 @@ Route::prefix('user')->name('user.')->group(function () {
     //Module 3
     //Marriage Reigstration
     Route::get('/manageMarriageRegistration', [UserManageMarriageRegController::class, 'manage'])->name('manageMarriageRegistration');
-    Route::get('/marriageRegistrationWithApproval', [UserManageMarriageRegController::class, 'marriageRegistrationWithApproval'])->name('marriageRegistrationWithApproval');
    
     Route::get('/eForm-BrideGroom/{id}', [UserManageMarriageRegController::class, 'couple'])->name('couple');
-    Route::get('/eFormsGrooms', [UserManageMarriageRegController::class, 'eFormsGrooms'])->name('eFormsGrooms');
-    Route::get('/eFormsBrides', [UserManageMarriageRegController::class, 'eFormsBrides'])->name('eFormsBrides');
-    Route::get('/eFormsMarriage', [UserManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
-
-    Route::get('/editEFormsGrooms', [UserManageMarriageRegController::class, 'editEFormsGrooms'])->name('editEFormsGrooms');
-    Route::get('/editEFormsBrides', [UserManageMarriageRegController::class, 'editEFormsBrides'])->name('editEFormsBrides');
-    Route::get('/editEFormsMarriage', [UserManageMarriageRegController::class, 'editEFormsMarriage'])->name('editEFormsMarriage');
-    Route::get('/viewEFormsGrooms/{id}', [UserManageMarriageRegController::class, 'viewEFormsGrooms'])->name('viewEFormsGrooms');
-    Route::get('/viewEFormsBrides/{id}', [UserManageMarriageRegController::class, 'viewEFormsBrides'])->name('viewEFormsBrides');
     Route::get('/viewEFormsMarriage/{id}', [UserManageMarriageRegController::class, 'viewEFormsMarriage'])->name('viewEFormsMarriage');
+    Route::get('/proof/{id}', [UserManageMarriageRegController::class, 'proof'])->name('proof');
+    Route::put('/eForm/{id}', [UserManageMarriageRegController::class, 'update'])->name('update');
+    Route::put('/eForm/submit/{id}', [UserManageMarriageRegController::class, 'submit'])->name('submit');
+
+    Route::get('/add-eForm-GroomBride', [UserManageMarriageRegController::class, 'addGroomBride'])->name('addGroomBride');
+    Route::get('/add-eForm-Marriage', [UserManageMarriageRegController::class, 'addMarriage'])->name('addMarriage');
+    Route::post('/add-eForm-store', [UserManageMarriageRegController::class, 'store'])->name('storeEForms');
+
     //store
     Route::post('/storeMarriage/{id}', [UserManageMarriageRegController::class, 'store'])->name('storeMarriage');
     //delete
@@ -179,8 +177,6 @@ Route::prefix('staff')->name('staff.')->group(function () {
     Route::get('editEPrepCourseInformation', [StaffManageCourseController::class, 'editEPrepCourseInformation'])->name('editEPrepCourseInformation');
     Route::get('viewEListGroomsPrepCourse', [StaffManageCourseController::class, 'viewEListGroomsPrepCourse'])->name('viewEListGroomsPrepCourse');
     Route::get('viewEGroomsInformation', [StaffManageCourseController::class, 'viewEGroomsInformation'])->name('viewEGroomsInformation');
-
-
 
     //module 4
     Route::post('/submitForm', [ConsultationController::class, 'submitForm'])->name('user.submitForm');

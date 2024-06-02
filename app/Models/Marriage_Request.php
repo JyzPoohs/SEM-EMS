@@ -76,6 +76,17 @@ class Marriage_Request extends Model
         'P_Marriage_Couple_License__No',
         'P_Phone_No',
 
+        //Saksi
+        'Saksi1_Name',
+        'Saksi1_IC_No',
+        'Saksi1_Age',
+        'Saksi1_Address',
+        'Saksi1_Phone',
+        'Saksi2_Name',
+        'Saksi2_IC_No',
+        'Saksi2_Age',
+        'Saksi2_Address',
+        'Saksi2_Phone',
     ];
 
     

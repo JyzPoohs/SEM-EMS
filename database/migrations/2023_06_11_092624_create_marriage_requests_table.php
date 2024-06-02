@@ -72,6 +72,18 @@ return new class extends Migration
             $table->string('P_Islam_Register_No')->nullable();
             $table->string('P_Marriage_Couple_License__No')->nullable();
             $table->string('P_Phone_No')->nullable();
+
+            //Saksi
+            $table->string('Saksi1_Name')->nullable();
+            $table->string('Saksi1_IC_No')->nullable();
+            $table->integer('Saksi1_Age')->nullable();
+            $table->string('Saksi1_Address')->nullable();
+            $table->string('Saksi1_Phone')->nullable();
+            $table->string('Saksi2_Name')->nullable();
+            $table->string('Saksi2_IC_No')->nullable();
+            $table->integer('Saksi2_Age')->nullable();
+            $table->string('Saksi2_Address')->nullable();
+            $table->string('Saksi2_Phone')->nullable();
             // $table->foreign('U_IC_No')->references('ic')->on('users');
         });
     }
