@@ -473,24 +473,25 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row justify-content-center text-center">
-                            <div class="col-md-4">
-                                <a href="{{ route('user.manageMarriageRegistration', ['id' => $data->MR_ID]) }}"
-                                    class="btn btn-block"
-                                    style="background-color: #0050d1; border:none; color: white;">Back To List</a>
-                            </div>
-                            @if ($data->MR_Submit_Status == 'SAVED')
-                                <div class="col-md-3">
-                                    <button type="submit" class="btn btn-info btn-block"
-                                        style="border:none; color: white;">Save</button>
+                            <div class="row justify-content-center text-center">
+                                <div class="col-md-4">
+                                    <a href="{{ route('user.manageMarriageRegistration', ['id' => $data->MR_ID]) }}"
+                                        class="btn btn-block"
+                                        style="background-color: #0050d1; border:none; color: white;">Back To List</a>
                                 </div>
-                            @endif
-                            <div class="col-md-4">
-                                <a href="{{ route('user.couple', ['id' => $data->MR_ID]) }}" class="btn btn-block"
-                                    style="background-color: #0050d1; border:none; color: white;">Back</a>
+                                @if ($data->MR_Submit_Status == 'SAVED')
+                                    <div class="col-md-3">
+                                        <button type="submit" class="btn btn-info btn-block"
+                                            style="border:none; color: white;">Save</button>
+                                    </div>
+                                @endif
+                                <div class="col-md-4">
+                                    <a href="{{ route('user.couple', ['id' => $data->MR_ID]) }}" class="btn btn-block"
+                                        style="background-color: #0050d1; border:none; color: white;">Back</a>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </form>

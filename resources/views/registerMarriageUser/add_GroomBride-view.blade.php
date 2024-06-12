@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-md-1">
                             <a href="{{ route('user.addMarriage') }}" class="btn btn-sm btn-light text-dark"
-                                style="border:none; color: white; font-size: 20px">&#8594;</a>
+                                style="border:none; color: white; font-size: 18px">&#8594;</a>
                         </div>
                     </div>
                 </div>
@@ -39,10 +39,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->U_IC_No}}</p>
+                                <p>{{ $data->U_IC_No}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Pasangan_IC_No}}</p>
+                                <p>{{ $data->Pasangan_IC_No}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -51,10 +51,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->user->name}}</p>
+                                <p>{{ $data->user->name}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Name}}</p>
+                                <p>{{ $data->P_Name}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -63,10 +63,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Birthday}}</p>
+                                <p>{{ $data->Birthday}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Date_of_Birth}}</p>
+                                <p>{{ $data->P_Date_of_Birth}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -75,10 +75,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Age}}</p>
+                                <p>{{ $data->Age}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Age}}</p>
+                                <p>{{ $data->P_Age}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -87,10 +87,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Ethnic}}</p>
+                                <p>{{ $data->Ethnic}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Ethnic}}</p>
+                                <p>{{ $data->P_Ethnic}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -99,10 +99,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Nationality}}</p>
+                                <p>{{ $data->Nationality}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Rationality}}</p>
+                                <p>{{ $data->P_Rationality}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -111,10 +111,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Edu_Level}}</p>
+                                <p>{{ $data->Edu_Level}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Edu_Level}}</p>
+                                <p>{{ $data->P_Edu_Level}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -123,10 +123,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Employment_Sector}}</p>
+                                <p>{{ $data->Employment_Sector}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Employment_Sector}}</p>
+                                <p>{{ $data->P_Employment_Sector}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -135,10 +135,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Amount_Salary}}</p>
+                                <p>{{ $data->Amount_Salary}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Amount_Salary}}</p>
+                                <p>{{ $data->P_Amount_Salary}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -147,10 +147,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Job}}</p>
+                                <p>{{ $data->Job}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Job}}</p>
+                                <p>{{ $data->P_Job}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -159,10 +159,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->IC_Address}}</p>
+                                <p>{{ $data->IC_Address}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_IC_Address}}</p>
+                                <p>{{ $data->P_IC_Address}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -171,10 +171,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->user->phone}}</p>
+                                <p>{{ $data->user->phone}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Phone_No}}</p>
+                                <p>{{ $data->P_Phone_No}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -183,10 +183,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->IC_Address}}</p>
+                                <p>{{ $data->IC_Address}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_IC_Address}}</p>
+                                <p>{{ $data->P_IC_Address}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -195,10 +195,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Current_Address}}</p>
+                                <p>{{ $data->Current_Address}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Current_Address}}</p>
+                                <p>{{ $data->P_Current_Address}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -207,10 +207,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Marriage_Status}}</p>
+                                <p>{{ $data->Marriage_Status}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Marriage_Status}}</p>
+                                <p>{{ $data->P_Marriage_Status}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -219,10 +219,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->Status_Saudara_Baru}}</p>
+                                <p>{{ $data->Status_Saudara_Baru}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Status_Saudara_Baru}}</p>
+                                <p>{{ $data->P_Status_Saudara_Baru}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -231,10 +231,10 @@
                             </div>
                             <div class="col-md-1">:</div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->PrepCourse_ID}}</p>
+                                <p>{{ $data->PrepCourse_ID}}</p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_PrepCourse_ID}}</p>
+                                <p>{{ $data->P_PrepCourse_ID}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -246,7 +246,7 @@
                                 <p> - </p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Date_Convert_Islam}}</p>
+                                <p>{{ $data->P_Date_Convert_Islam}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -258,7 +258,7 @@
                                 <p> - </p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Islam_Register_No}}</p>
+                                <p>{{ $data->P_Islam_Register_No ? $data->P_Islam_Register_No : ''}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -270,7 +270,7 @@
                                 <p> - </p>
                             </div>
                             <div class="col-md-4 text-center">
-                                <p>{{ $data->mohon->P_Marriage_Couple_License__No}}</p>
+                                <p>{{ $data->P_Marriage_Couple_License__No}}</p>
                             </div>
                         </div>
                         <br>
