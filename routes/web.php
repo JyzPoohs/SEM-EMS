@@ -135,12 +135,11 @@ Route::prefix('staff')->name('staff.')->group(function () {
         Route::get('/manageMarriage', [StaffManageMarriageRegController::class, 'manage'])->name('manageMarriage');
         Route::get('/manageMarriageCardApplicationListStaff', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApplicationListStaff');
         
-        Route::get('/eForm-BrideGroom/{id}', [StaffManageMarriageRegController::class, 'couple'])->name('couple');
-        Route::get('/eFormsGrooms/{id}', [StaffManageMarriageRegController::class, 'eFormsGrooms'])->name('eFormsGrooms');
-        Route::get('/eFormsBrides/{id}', [StaffManageMarriageRegController::class, 'eFormsBrides'])->name('eFormsBrides');
+        Route::get('/eForm-BrideGroom/{id}', [StaffManageMarriageRegController::class, 'editCouple'])->name('couple');
+        Route::get('/proof/{id}', [StaffManageMarriageRegController::class, 'proof'])->name('proof');
         Route::get('/eFormsMarriage/{id}', [StaffManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
-        Route::get('/approveMarriageRegistration/{id}', [StaffManageMarriageRegController::class, 'approveMarriageRegistration'])->name('approveMarriageRegistration');
-        Route::get('/deleteMR/{id}', [StaffManageMarriageRegController::class, 'destroy'])->name('deleteMarriageRegistration');
+        Route::put('/update/status/{id}',  [StaffManageMarriageRegController::class, 'update'])->name('update');
+        Route::delete('/deleteMR/{id}', [StaffManageMarriageRegController::class, 'destroy'])->name('destroy');
 
         Route::get('/manageMarriageCardApp', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApp');
         Route::get('/approveMarriageCardApp', [StaffManageCardAppController::class, 'approveCardAppStaff'])->name('approveMarriageCardApp');

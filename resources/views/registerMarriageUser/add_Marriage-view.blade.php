@@ -17,7 +17,7 @@
                             </div>
                             <div class="col-md-1">
                                 <a href="{{ route('user.addGroomBride') }}" class="btn btn-sm btn-light text-dark"
-                                    style="border:none; color: white; font-size: 20px">&larr;</a>
+                                    style="border:none; color: white; font-size: 18px">&larr;</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <p>{{ $data->mohon->Date_Request }}</p>
+                                            <p>{{ $data->Date_Request }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -58,7 +58,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <p>{{ $eform->P_Name }}</p>
+                                            <p>{{ $data->P_Name }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -74,7 +74,7 @@
                                                 placeholder="e.g. RPP0001">
                                         </div>
                                         @if ($errors->has('MR_Payment_Receipt'))
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="text-danger" role="alert">
                                                 {{ $errors->first('MR_Payment_Receipt') }}
                                             </div>
                                         @endif
@@ -84,7 +84,7 @@
                                         <input type="file" class="form-control @error('MR_Receipt_Proof') is-invalid @enderror"
                                             id="file" name="MR_Receipt_Proof" value="{{old('MR_Receipt_Proof')}}">
                                         @if ($errors->has('MR_Receipt_Proof'))
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="text-danger" role="alert">
                                                 {{ $errors->first('MR_Receipt_Proof') }}
                                             </div>
                                         @endif
@@ -103,7 +103,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->W_Name }}</p>
+                                                <p>{{ $data->W_Name }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -114,7 +114,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->W_IC_No }}</p>
+                                                <p>{{ $data->W_IC_No }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -125,7 +125,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->W_Phone }}</p>
+                                                <p>{{ $data->W_Phone }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -136,7 +136,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->W_Category_Nikah }}</p>
+                                                <p>{{ $data->W_Category_Nikah }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -147,7 +147,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->W_Address }}</p>
+                                                <p>{{ $data->W_Address }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Date_Nikah }}</p>
+                                            <p>{{ $data->Date_Nikah }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -183,7 +183,7 @@
                                                 class="form-control @error('MR_Time_Nikah') is-invalid @enderror">
                                         </div>
                                         @if ($errors->has('MR_Time_Nikah'))
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="text-danger" role="alert">
                                                 {{ $errors->first('MR_Time_Nikah') }}
                                             </div>
                                         @endif
@@ -196,7 +196,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Marriage_Place }}</p>
+                                            <p>{{ $data->Marriage_Place }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -207,7 +207,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Marriage_Dowry_Type }}</p>
+                                            <p>{{ $data->Marriage_Dowry_Type }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -218,7 +218,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>RM {{ $eform->Marriage_Dowry }}</p>
+                                            <p>RM {{ $data->Marriage_Dowry }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -229,7 +229,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>RM {{ $eform->Other_Grants }}</p>
+                                            <p>RM {{ $data->Other_Grants }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -245,7 +245,7 @@
                                                 placeholder="e.g. Abdullah">
                                         </div>
                                         @if ($errors->has('MR_Jurunikah_Name'))
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="text-danger" role="alert">
                                                 {{ $errors->first('MR_Jurunikah_Name') }}
                                             </div>
                                         @endif
@@ -258,7 +258,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Slip_Mohon_Online }}</p>
+                                            <p>{{ $data->Slip_Mohon_Online }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -269,7 +269,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Date_Nikah }}</p>
+                                            <p>{{ $data->Date_Nikah }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -280,7 +280,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Marriage_Place }}</p>
+                                            <p>{{ $data->Marriage_Place }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -291,7 +291,7 @@
                                             <label for="">:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>{{ $eform->Marriage_Country }}</p>
+                                            <p>{{ $data->Marriage_Country }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -310,7 +310,7 @@
                                                 <option {{old('MR_Lafaz_Taliq') == 'TIDAK' ? 'selected' : ''}} value="TIDAK">TIDAK</option>
                                             </select>
                                             @if ($errors->has('MR_Lafaz_Taliq'))
-                                            <div class="alert alert-danger" role="alert">
+                                            <div class="text-danger" role="alert">
                                                 {{ $errors->first('MR_Lafaz_Taliq') }}
                                             </div>
                                         @endif
@@ -331,7 +331,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi1_Name }}</p>
+                                                <p>{{ $data->Saksi1_Name }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -342,7 +342,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi1_IC_No }}</p>
+                                                <p>{{ $data->Saksi1_IC_No }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -353,7 +353,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi1_Age }}</p>
+                                                <p>{{ $data->Saksi1_Age }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -364,7 +364,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi1_Address }}</p>
+                                                <p>{{ $data->Saksi1_Address }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -375,7 +375,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi1_Phone }}</p>
+                                                <p>{{ $data->Saksi1_Phone }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -388,7 +388,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi2_Name }}</p>
+                                                <p>{{ $data->Saksi2_Name }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -399,7 +399,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi2_IC_No }}</p>
+                                                <p>{{ $data->Saksi2_IC_No }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -410,7 +410,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi2_Age }}</p>
+                                                <p>{{ $data->Saksi2_Age }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -421,7 +421,7 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi2_Address }}</p>
+                                                <p>{{ $data->Saksi2_Address }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -432,12 +432,12 @@
                                                 <label for="">:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{{ $eform->Saksi2_Phone }}</p>
+                                                <p>{{ $data->Saksi2_Phone }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <input hidden name="request_id" value="{{ $eform->Slip_Mohon_Online }}" type="text">
+                                <input hidden name="request_id" value="{{ $data->Slip_Mohon_Online }}" type="text">
                             </div>
                             <div class="row justify-content-center text-center mt-3">
                                 <div class="col-md-4">

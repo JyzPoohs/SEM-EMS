@@ -19,7 +19,7 @@ class UserManageMarriageRegController extends Controller
     public function couple($id)
     {
         $data = Marriage_Registration::where('MR_ID', $id)->with('mohon.user')->first();
-        return view('registerMarriageUser.view_GroomBride', compact('data'));
+        return view('registerMarriageUser.view_GroomBride-view', compact('data'));
     }
 
     public function viewEFormsMarriage($id)
@@ -42,17 +42,14 @@ class UserManageMarriageRegController extends Controller
 
     public function addGroomBride()
     {
-        $ic = auth()->user()->ic;
-        $data = Marriage_Registration::where('U_IC_No', $ic)->with('mohon.user')->first();
+        $data = Marriage_Request::where('U_IC_No', auth()->user()->ic)->first();
         return view('registerMarriageUser.add_GroomBride-view', compact('data'));
     }
 
     public function addMarriage()
     {
-        $ic = auth()->user()->ic;
-        $eform = Marriage_Request::where('U_IC_No', $ic)->first();
-        $data = Marriage_Registration::where('U_IC_No', $ic)->with('mohon.user')->first();
-        return view('registerMarriageUser.add_Marriage-view', compact('eform', 'data'));
+        $data = Marriage_Request::where('U_IC_No', auth()->user()->ic)->first();
+        return view('registerMarriageUser.add_Marriage-view', compact('data'));
     }
 
     public function store(Request $request)
