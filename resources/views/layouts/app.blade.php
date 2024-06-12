@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -16,8 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <link href="{{ env('APP_URL') . '/css/login.css' }}" rel="stylesheet" />
-    <link href="{{ env('APP_URL') . '/css/register.css' }}" rel="stylesheet" />
+    <link href="{{ url('/css/login.css') }}" rel="stylesheet" />
+    <link href="{{ url('/css/register.css') }}" rel="stylesheet" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -28,7 +28,7 @@
 
     <header class="container">
         <a class="nav-link" href="{{ route('login') }}">
-            <img src="{{ env('APP_URL') . '/img/Header.png' }}" width="100%" style="align-content: center;"
+            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;"
                 alt="Header EMS">
         </a>
     </header>

@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>e-Munakahat</title>
 
-    <link rel="icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ env('APP_URL') . '/img/logo.png' }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('/img/logo.png') }}" type="image/x-icon">
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
-    <link href="{{ env('APP_URL') . '/css/staff-sidebar.css' }}" rel="stylesheet" />
-    <link href="{{ env('APP_URL') . '/css/staff-profileList.css' }}" rel="stylesheet" />
+    <link href="{{ url('/css/staff-sidebar.css') }}" rel="stylesheet" />
+    <link href="{{ url('/css/staff-profileList.css') }}" rel="stylesheet" />
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -33,8 +33,7 @@
 
     <header class="container">
         <a class="nav-link" href="{{ route('staff.profile') }}">
-            <img src="{{ env('APP_URL') . '/img/Header.png' }}" width="100%" style="align-content: center;"
-                alt="Header EMS">
+            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;" alt="Header EMS">
         </a>
     </header>
 </head>
@@ -95,7 +94,8 @@
                                 class="dropdown-toggle">Pendaftaran Nikah</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
                                 <li>
-                                    <a href="{{ route('staff.manageMarriage') }}">Senarai Permohonan Pendaftaran Nikah</a>
+                                    <a href="{{ route('staff.manageMarriage') }}">Senarai Permohonan Pendaftaran
+                                        Nikah</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('staff.manageMarriageCardApp') }}">Sijil Dan Kad Nikah</a>
@@ -103,7 +103,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{route('staff.ConsultationApplicationList')}}">Aduan/Khidmat Nasihat</a>
+                            <a href="{{ route('staff.ConsultationApplicationList') }}">Aduan/Khidmat Nasihat</a>
                         </li>
                         <li>
                             <a href="{{ route('staff.staffIncentive') }}">Insentif</a>
