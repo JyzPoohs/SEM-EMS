@@ -76,31 +76,41 @@
             <h3 class="text-center mt-2">MUAT NAIK DOKUMEN</h3>
             <table class="table table-bordered" style="border: blue; background-color: white">
                 <tr>
-                    <td>Slip Permohonan Online</td>
+                    <td>
+                        Slip Permohonan Online
+                    </td>
                     <td class="text-center">
                         <input type="file" name="slip_permohonan">
                     </td>
                 </tr>
                 <tr>
-                    <td>Borang 2 [Seksyen 16]-Permohonan untuk Kebenaran Berkahwin</td>
+                    <td>
+                        Borang 2 [Seksyen 16]-Permohonan untuk Kebenaran Berkahwin
+                    </td>
                     <td class="text-center">
                         <input type="file" name="borang_2">
                     </td>
                 </tr>
                 <tr>
-                    <td>Borang 4 [Seksyen 13]-Persetujuan dan Wakalah Wali</td>
+                    <td>
+                        Borang 4 [Seksyen 13]-Persetujuan dan Wakalah Wali
+                    </td>
                     <td class="text-center">
                         <input type="file" name="borang_4">
                     </td>
                 </tr>
                 <tr>
-                    <td>Borang 1 [Seksyen 13]-Akuan Permastautin</td>
+                    <td>
+                        Borang 1 [Seksyen 13]-Akuan Permastautin
+                    </td>
                     <td class="text-center">
                         <input type="file" name="borang_1">
                     </td>
                 </tr>
                 <tr>
-                    <td>Borang Ujian Saringan HIV Permohonan</td>
+                    <td>
+                        Borang Ujian Saringan HIV Permohonan
+                    </td>
                     <td class="text-center">
                         <input type="file" name="ujian_hiv">
                     </td>
