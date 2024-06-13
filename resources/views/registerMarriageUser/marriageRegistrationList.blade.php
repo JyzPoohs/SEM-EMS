@@ -40,7 +40,7 @@
                                         <td>MR00{{ $data->MR_ID }}</td>
                                         <td>{{ $data->mohon->Pasangan_IC_No }} <br>
                                             {{ $data->mohon->P_Name }}</td>
-                                        <td>{{ \Carbon\Carbon::parse($data->created_at)->format('Y/m/d') }}</td>
+                                        <td>{{ $data['created_at']->format('Y/m/d') }}</td>
                                         <td class="text-center">
                                             {{ $data->MR_Submit_Status ? strtoupper($data->MR_Submit_Status) : '' }}</td>
                                         <td class="text-center">
@@ -49,30 +49,34 @@
                                                 {{ $data->MR_Approval_Status }}</span>
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{ route('user.couple', $data->MR_ID) }}" class="btn btn-primary">
-                                                <i class="fas fa-eye"></i></a>
+                                            @if ($data->MR_Submit_Status == 'SUBMITTED')
+                                                <a href="{{ route('user.couple', $data->MR_ID) }}" class="btn btn-primary">
+                                                    <i class="fas fa-eye"></i></a>
+                                            @endif
                                             @if ($data->MR_Submit_Status == 'SAVED')
-                                                <form id="submit-form-{{ $data->MR_ID }}" 
-                                                    action="{{ route('user.submit', $data->MR_ID) }}" method="post" style="display: none;">
+                                                <form id="submit-form-{{ $data->MR_ID }}"
+                                                    action="{{ route('user.submit', $data->MR_ID) }}" method="post"
+                                                    style="display: none;">
                                                     @csrf
                                                     @method('PUT')
                                                 </form>
                                                 <a href="#" class="btn btn-success mr-1"
                                                     onclick="event.preventDefault(); if (confirm('Confirm to submit this application?')) { document.getElementById('submit-form-{{ $data->MR_ID }}').submit(); }">
                                                     <i class="fas fa-paper-plane"></i>
-                                                <a href="{{ route('user.couple', $data->MR_ID) }}"
-                                                    class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="{{ route('user.couple', $data->MR_ID) }}"
+                                                        class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                                    <form id="delete-form-{{ $data->MR_ID }}"
+                                                        action="{{ route('user.deleteMarriageRegistration', ['id' => $data->MR_ID]) }}"
+                                                        method="POST" style="display: none;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    </form>
+                                                    <a href="#" class="btn btn-danger"
+                                                        onclick="event.preventDefault(); if (confirm('Are you sure you want to delete this application?')) { document.getElementById('delete-form-{{ $data->MR_ID }}').submit(); }">
+                                                        <i class="fa fa-trash-alt"></i>
+                                                    </a>
                                             @endif
-                                            <form id="delete-form-{{ $data->MR_ID }}"
-                                                action="{{ route('user.deleteMarriageRegistration', ['id' => $data->MR_ID]) }}"
-                                                method="POST" style="display: none;">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
-                                            <a href="#" class="btn btn-danger"
-                                                onclick="event.preventDefault(); if (confirm('Are you sure you want to delete this application?')) { document.getElementById('delete-form-{{ $data->MR_ID }}').submit(); }">
-                                                <i class="fa fa-trash-alt"></i>
-                                            </a>
+
                                         </td>
                                     </tr>
                                 @endforeach

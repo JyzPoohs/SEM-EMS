@@ -33,8 +33,7 @@
 
     <header class="container">
         <a class="nav-link" href="{{ route('staff.profile') }}">
-            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;"
-                alt="Header EMS">
+            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;" alt="Header EMS">
         </a>
     </header>
 </head>
@@ -95,7 +94,8 @@
                                 class="dropdown-toggle">Pendaftaran Nikah</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
                                 <li>
-                                    <a href="{{ route('staff.manageMarriage') }}">Senarai Permohonan Pendaftaran Nikah</a>
+                                    <a href="{{ route('staff.manageMarriage') }}">Senarai Permohonan Pendaftaran
+                                        Nikah</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('staff.manageMarriageCardApp') }}">Sijil Dan Kad Nikah</a>
@@ -103,7 +103,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{route('staff.ConsultationApplicationList')}}">Aduan/Khidmat Nasihat</a>
+                            <a href="{{ route('staff.ConsultationApplicationList') }}">Aduan/Khidmat Nasihat</a>
                         </li>
                         <li>
                             <a href="{{ route('staff.staffIncentive') }}">Insentif</a>

@@ -34,8 +34,7 @@
 
     <header class="container">
         <a href="{{ route('login') }}">
-            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;"
-                alt="Header EMS">
+            <img src="{{ url('/img/Header.png') }}" width="100%" style="align-content: center;" alt="Header EMS">
         </a>
     </header>
 </head>
@@ -66,10 +65,11 @@
                                     <a href="{{ route('user.requestMarriageUser') }}">Kebenaran Berkahwin</a>
                                 </li>
                                 <li>
-                                <a href="{{route('user.editFormGrooms')}}">Kursus Kahwin</a>
+                                    <a href="{{ route('user.editFormGrooms') }}">Kursus Kahwin</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('user.prepCourseInformation')}}">Senarai Pemohon Kursus Kahwin</a>
+                                    <a href="{{ route('user.prepCourseInformation') }}">Senarai Pemohon Kursus
+                                        Kahwin</a>
                                 </li>
                             </ul>
                         </li>
@@ -78,10 +78,12 @@
                                 class="dropdown-toggle">Pendaftaran Nikah</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
                                 <li>
-                                    <a href="{{ route('user.manageMarriageRegistration') }}">Mohon Pendaftaran Nikah</a>
+                                    <a href="{{ route('user.manageMarriageRegistration') }}">Mohon Pendaftaran
+                                        Nikah</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('user.manageMarriageCardApp', ['id' => auth()->user()->id])}}">Mohon Sijil Dan Kad Nikah</a>
+                                    <a href="{{ route('user.manageMarriageCardApp', ['id' => auth()->user()->id]) }}">Mohon
+                                        Sijil Dan Kad Nikah</a>
                                 </li>
                             </ul>
                         </li>
@@ -98,7 +100,7 @@
                                 <li>
                                     <a href="{{ route('user.userStatus') }}">Status</a>
                                 </li>
-                             </ul>
+                            </ul>
                         </li>
                         <li>
                             <form role="form" method="post" action="{{ route('logout') }}" id="logout-form">

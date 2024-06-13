@@ -10,7 +10,6 @@
                         <h6>PERMOHONAN PENDAFTARAN NIKAH >> MAKLUMAT KELULUSAN</h6>
                     </div>
                     <div class="card-body p-3" style="background-color: #e2fbfb";>
-
                         <table>
                             <tbody>
                                 <tr>
