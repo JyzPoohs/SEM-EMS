@@ -10,6 +10,7 @@
                 <br>
                 <div class="card mb-4">
                     <div class="card-body p-3" style="background-color: #ECF3FF;">
+                        <form action="{{ route('groom.save') }}" method="POST">
                             @csrf
                             <table class="table table-borderless">
                                 <tbody>
@@ -139,6 +140,7 @@
                                        style="background-color: #0050d1; border:none; color: white;">NEXT</a>
                                 </div>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>

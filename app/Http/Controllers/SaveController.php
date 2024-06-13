@@ -3,87 +3,125 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\MarriageData;
 
 class SaveController extends Controller
 {
-    public function showDocumentForm()
-    {
-        return view('marriageReq.Document');
-    }
-
-    public function postDocumentForm(Request $request)
+    public function saveDocuments(Request $request)
     {
         $request->validate([
-            'document' => 'required|string|max:255',
+            'slip_permohonan' => 'file|mimes:pdf,doc,docx',
+            'borang_2' => 'file|mimes:pdf,doc,docx',
+            'borang_4' => 'file|mimes:pdf,doc,docx',
+            'borang_1' => 'file|mimes:pdf,doc,docx',
+            'ujian_hiv' => 'file|mimes:pdf,doc,docx',
         ]);
 
-        $formData = $request->session()->get('formData', []);
-        $formData['document'] = $request->document;
-        $request->session()->put('formData', $formData);
+        $documents = [];
+        foreach ($request->file() as $key => $file) {
+            $documents[$key] = $file->store('documents');
+        }
 
-        return redirect()->route('form.document')->with('success', 'Document data saved successfully!');
+        return redirect()->route('user.requestMarriageUser')->with('success', 'Documents uploaded successfully!');
     }
 
-    public function showBridesForm()
-    {
-        return view('marriageReq.FormBrides');
-    }
-
-    public function postBridesForm(Request $request)
+    public function saveBrideInfo(Request $request)
     {
         $request->validate([
-            'bride_name' => 'required|string|max:255',
+            'P_IC_No' => 'required|string',
+            'P_Name' => 'required|string',
+            'birthday' => 'required|date',
+            'age' => 'required|integer',
+            'ethnic' => 'required|string',
+            'nationality' => 'required|string',
+            'ic_address' => 'required|string',
+            'current_address' => 'required|string',
+            'mobile_phone' => 'required|string',
+            'home_phone' => 'nullable|string',
+            'edu_level' => 'required|string',
+            'employment_sector' => 'nullable|string',
+            'job_position' => 'nullable|string',
+            'work_address' => 'nullable|string',
+            'office_phone' => 'nullable|string',
+            'email' => 'nullable|email',
+            'income' => 'nullable|numeric',
+            'marital_status_before' => 'nullable|string',
+            'pre_marriage_course_certificate' => 'nullable|string',
+            'convert_status' => 'required|string',
         ]);
 
-        $formData = $request->session()->get('formData', []);
-        $formData['bride_name'] = $request->bride_name;
-        $request->session()->put('formData', $formData);
+        // Save bride info to the database
 
-        return redirect()->route('form.brides')->with('success', 'Brides data saved successfully!');
+        return redirect()->route('user.FormMarriage')->with('success', 'Bride information saved successfully!');
     }
 
-    public function showGroomForm()
-    {
-        return view('marriageReq.FormGroom');
-    }
-
-    public function postGroomForm(Request $request)
+    public function saveGroomInfo(Request $request)
     {
         $request->validate([
-            'groom_name' => 'required|string|max:255',
+            'U_IC_No' => 'required|string',
+            'name' => 'required|string',
+            'birthday' => 'required|date',
+            'age' => 'required|integer',
+            'gender' => 'required|string',
+            'ethnic' => 'required|string',
+            'nationality' => 'required|string',
+            'ic_address' => 'required|string',
+            'current_address' => 'required|string',
+            'mobile_phone' => 'required|string',
+            'home_phone' => 'nullable|string',
+            'edu_level' => 'required|string',
+            'employment_sector' => 'nullable|string',
+            'job_position' => 'nullable|string',
+            'work_address' => 'nullable|string',
+            'office_phone' => 'nullable|string',
+            'email' => 'nullable|email',
+            'income' => 'nullable|numeric',
+            'marital_status_before' => 'nullable|string',
+            'pre_marriage_course_certificate' => 'nullable|string',
+            'convert_status' => 'required|string',
         ]);
 
-        $formData = $request->session()->get('formData', []);
-        $formData['groom_name'] = $request->groom_name;
-        $request->session()->put('formData', $formData);
+        // Save groom info to the database
 
-        return redirect()->route('form.groom')->with('success', 'Groom data saved successfully!');
+        return redirect()->route('user.FormBrides')->with('success', 'Groom information saved successfully!');
     }
 
-    public function showMarriageForm()
-    {
-        return view('marriageReq.FormMarriage');
-    }
-
-    public function postMarriageForm(Request $request)
+    public function saveMarriageInfo(Request $request)
     {
         $request->validate([
-            'marriage_date' => 'required|date',
+            'tarikh_mohon' => 'required|date',
+            'tempat_kahwin' => 'required|string',
+            'negara' => 'required|string',
+            'negeri' => 'required|string',
+            'tarikh_akad_nikah' => 'required|date',
+            'alamat_tempat_kahwin' => 'required|string',
+            'jenis_mas_kahwin' => 'required|string',
+            'mas_kahwin' => 'required|numeric',
+            'hantaran' => 'nullable|numeric',
+            'nama_wali' => 'required|string',
+            'no_kad_pengenalan_wali' => 'required|string',
+            'alamat_wali' => 'required|string',
+            'tarikh_lahir' => 'required|date',
+            'umur_wali' => 'required|integer',
+            'no_telefon_wali' => 'required|string',
+            'hubungan' => 'required|string',
+            'tarikh_nikah_ibu_bapa' => 'required|date',
+            'no_sijil_nikah_ibu_bapa' => 'required|string',
+            'nama_pelulus' => 'required|string',
+            'nama_saksi_1' => 'required|string',
+            'no_kad_pengenalan_saksi_1' => 'required|string',
+            'umur_saksi_1' => 'required|integer',
+            'alamat_saksi_1' => 'required|string',
+            'no_telefon_saksi_1' => 'required|string',
+            'nama_saksi_2' => 'required|string',
+            'no_kad_pengenalan_saksi_2' => 'required|string',
+            'umur_saksi_2' => 'required|integer',
+            'alamat_saksi_2' => 'required|string',
+            'no_telefon_saksi_2' => 'required|string',
+            'document' => 'nullable|file|mimes:pdf,doc,docx',
         ]);
 
-        $formData = $request->session()->get('formData', []);
-        $formData['marriage_date'] = $request->marriage_date;
+        // Save marriage info to the database
 
-        // Save all data to the database
-        $data = MarriageData::updateOrCreate(['id' => session('formData.id')], $formData);
-
-        // Save the ID to session to link further steps if needed
-        $request->session()->put('formData.id', $data->id);
-
-        // Clear session data if the process is complete
-        $request->session()->forget('formData');
-
-        return redirect()->route('form.marriage')->with('success', 'Marriage data saved successfully!');
+        return redirect()->route('user.Document')->with('success', 'Marriage information saved successfully!');
     }
 }

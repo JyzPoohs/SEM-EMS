@@ -197,14 +197,13 @@ Route::get('/mregistration', function () {
     return view('module3.MR');
 });
 
-Route::get('/document', [SaveController::class, 'showDocumentForm'])->name('form.document');
-Route::post('/document', [SaveController::class, 'postDocumentForm'])->name('form.document.post');
+Route::post('/save-documents', [SaveController::class, 'saveDocuments'])->name('documents.save');
+Route::post('/save-bride-info', [SaveController::class, 'saveBrideInfo'])->name('bride.save');
+Route::post('/save-groom-info', [SaveController::class, 'saveGroomInfo'])->name('groom.save');
+Route::post('/save-marriage-info', [SaveController::class, 'saveMarriageInfo'])->name('marriage.save');
 
-Route::get('/brides', [SaveController::class, 'showBridesForm'])->name('form.brides');
-Route::post('/brides', [SaveController::class, 'postBridesForm'])->name('form.brides.post');
-
-Route::get('/groom', [SaveController::class, 'showGroomForm'])->name('form.groom');
-Route::post('/groom', [SaveController::class, 'postGroomForm'])->name('form.groom.post');
-
-Route::get('/marriage', [SaveController::class, 'showMarriageForm'])->name('form.marriage');
-Route::post('/marriage', [SaveController::class, 'postMarriageForm'])->name('form.marriage.post');
+Route::get('/form-grooms', [FormController::class, 'showGroomForm'])->name('user.FormGrooms');
+Route::get('/form-brides', [FormController::class, 'showBrideForm'])->name('user.FormBrides');
+Route::get('/form-marriage', [FormController::class, 'showMarriageForm'])->name('user.FormMarriage');
+Route::get('/document', [FormController::class, 'showDocumentForm'])->name('user.Document');
+Route::get('/request-marriage', [FormController::class, 'showRequestMarriage'])->name('user.requestMarriageUser');
