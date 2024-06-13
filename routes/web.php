@@ -18,6 +18,7 @@ use App\Http\Controllers\UserManageCourseController;
 use App\Http\Controllers\StaffManageCourseController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\SaveController;
 
 Route::post('/submitForm', [Consultation::class, 'submitForm'])->name('user.submitForm');
 
@@ -70,7 +71,7 @@ Route::prefix('user')->name('user.')->group(function () {
     //Module 3
     //Marriage Reigstration
     Route::get('/manageMarriageRegistration', [UserManageMarriageRegController::class, 'manage'])->name('manageMarriageRegistration');
-   
+
     Route::get('/eForm-BrideGroom/{id}', [UserManageMarriageRegController::class, 'couple'])->name('couple');
     Route::get('/viewEFormsMarriage/{id}', [UserManageMarriageRegController::class, 'viewEFormsMarriage'])->name('viewEFormsMarriage');
     Route::get('/proof/{id}', [UserManageMarriageRegController::class, 'proof'])->name('proof');
@@ -134,7 +135,7 @@ Route::prefix('staff')->name('staff.')->group(function () {
         //Module 3
         Route::get('/manageMarriage', [StaffManageMarriageRegController::class, 'manage'])->name('manageMarriage');
         Route::get('/manageMarriageCardApplicationListStaff', [StaffManageCardAppController::class, 'manageCardAppStaff'])->name('manageMarriageCardApplicationListStaff');
-        
+
         Route::get('/eForm-BrideGroom/{id}', [StaffManageMarriageRegController::class, 'editCouple'])->name('couple');
         Route::get('/proof/{id}', [StaffManageMarriageRegController::class, 'proof'])->name('proof');
         Route::get('/eFormsMarriage/{id}', [StaffManageMarriageRegController::class, 'eFormsMarriage'])->name('eFormsMarriage');
@@ -195,3 +196,15 @@ require __DIR__ . '/auth.php';
 Route::get('/mregistration', function () {
     return view('module3.MR');
 });
+
+Route::get('/document', [SaveController::class, 'showDocumentForm'])->name('form.document');
+Route::post('/document', [SaveController::class, 'postDocumentForm'])->name('form.document.post');
+
+Route::get('/brides', [SaveController::class, 'showBridesForm'])->name('form.brides');
+Route::post('/brides', [SaveController::class, 'postBridesForm'])->name('form.brides.post');
+
+Route::get('/groom', [SaveController::class, 'showGroomForm'])->name('form.groom');
+Route::post('/groom', [SaveController::class, 'postGroomForm'])->name('form.groom.post');
+
+Route::get('/marriage', [SaveController::class, 'showMarriageForm'])->name('form.marriage');
+Route::post('/marriage', [SaveController::class, 'postMarriageForm'])->name('form.marriage.post');

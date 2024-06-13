@@ -15,13 +15,13 @@ class UserRequestMarriageController extends Controller
     {
         return view('marriageReq.FormGrooms');
     }
-    
+
     public function FormBrides(Request $request)
     {
         //$request = new Marriage_Request();
         return view('marriageReq.FormBrides');
     }
-    
+
     public function FormMarriage()
     {
         return view('marriageReq.FormMarriage');
